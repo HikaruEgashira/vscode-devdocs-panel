@@ -1,0 +1,41 @@
+{
+	"name": "devdocs-panel",
+	"displayName": "devdocs-panel",
+	"description": "look devdocs into vscode",
+	"publisher": "HikaruEgashira",
+	"repository": {
+        "type": "git",
+        "url": "https://github.com/HikaruEgashira/vscode-devdocs-panel"
+    },
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.37.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.devdocs"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [{
+			"command": "extension.devdocs",
+			"title": "Open devdocs"
+		}]
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "yarn run compile"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/node": "^10.12.21",
+		"@types/vscode": "^1.37.0",
+		"glob": "^7.1.4",
+		"typescript": "^3.3.1",
+		"vscode-test": "^1.0.0-next.0"
+	}
+}
